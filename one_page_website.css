@@ -1,4 +1,113 @@
 /*-------------------------------------------------
+    MENU SECTION ANIMATION
+-------------------------------------------------*/
+.menu {
+    color: #f00;
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: incline;
+    margin: 0% auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu li {
+    color: #000;
+    background-color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    margin: 0% auto;
+    position: relative;
+    padding: 15px 4%;
+    border: 1px solid #9D9FA2;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    /*background-color: #052136;*/
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: .4s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.menu li:hover {
+    color: rgb(106, 248, 58);
+    background-color: rgba(100, 65, 0, 0.3);
+}
+
+/*-------------------------------------------------
+    GALLERY SECTION ANIMATION
+-------------------------------------------------*/
+
+.photo {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 1px;
+    border: 1px solid #400232;
+    background-color: rgb(80, 138, 3);
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+.photo-container {
+    text-align: center;
+    margin: 15px auto;
+    width: 500px;
+    height: 669px;
+}
+
+.photo-container img {
+    max-width: 100%;
+    width: 500px;
+    height: 669px
+}
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center; /* Fore centering text inside .photo-overlay */
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+}
+
+.white-head {
+    color: #C9BDAA;
+    margin-top: 5%;
+}
+
+/*-------------------------------------------------
+    Photo Overlay Transistions
+-------------------------------------------------*/
+
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+.photo img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+/*-------------------------------------------------
     GENERIC STYLES
 -------------------------------------------------*/
 html {
@@ -253,7 +362,7 @@ section {
     color: palevioletred;
     padding: 12px 12px;
     width: 70%;
-    border: 1px solid #0473d5;
+    border: 1px solid #78bbf5;
     margin: 2% auto;
     border-radius: 7px;
     background: rgb(227, 222, 222);
@@ -281,6 +390,13 @@ section {
 
 .reservation input[type="text"]:hover {
     box-shadow: 0 0 18px rgba(163, 215, 6, 0.8);
+}
+
+input {
+    border-radius: 15%;
+    border: solid rgb(49, 184, 49);
+    margin: 10px;
+    width: 70%;
 }
 
 .form-spacer {
